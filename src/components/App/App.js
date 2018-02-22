@@ -5,7 +5,8 @@ import './App.css';
 import { connect } from 'react-redux';
 import { populateHouses } from '../../actions/actions';
 import * as api from '../../apiCalls'
-class App extends Component {
+
+export class App extends Component {
 
   componentDidMount = async () => {
     const houseData = await api.resolveEndpoint('http://localhost:3001/api/v1/houses')
@@ -20,7 +21,8 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
-          { this.props.houses.length ? null : 
+          { this.props.houses.length ? 
+            <CardContainer /> : 
             <img src={'./wolf.gif'} id='wolf' alt='wolf' />}
         </div>
       </div>
@@ -34,7 +36,9 @@ App.propTypes = {
 };
 
 const mapStateToProps = ({ houses }) => ({ houses });
+
 const mapDispatchToProps = dispatch => ({ 
   populateHouses: (houses) => dispatch(populateHouses(houses))
 });
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
