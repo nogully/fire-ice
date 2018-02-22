@@ -3,7 +3,8 @@ export const populateHouses = (houses) => ({
   houses
 });
 
-export const expandHouse = (houseName) => ({
+export const expandHouse = (houseName, swornMembers) => ({
   type: 'EXPAND_HOUSE', 
-  houseName
+  houseName, 
+  swornMembers
 })

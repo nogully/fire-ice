@@ -7,7 +7,7 @@ export const houses = (state=[], action) => {
     case 'EXPAND_HOUSE': 
       const newState = state.map( house => {
         if (house.name === action.houseName) {
-          house['swornMembers'] = [1, 2, 3];
+          house.swornMembers = await apiCalls.
           return house
         } else { 
           return house }
