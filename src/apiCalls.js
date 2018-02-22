@@ -28,6 +28,7 @@ export const resolveEndpoint = async (url) => {
 }
 
 const cleanHouses = houses => {
+  if (houses) {
   const cleaned = houses.map( house => {
     const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
     return Object.assign({}, 
@@ -42,6 +43,7 @@ const cleanHouses = houses => {
     )
   })
   return cleaned;
+} else {return null}
 }
 
 export const fetchSwornMembers = (house) => {

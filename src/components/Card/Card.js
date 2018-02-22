@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes, { func, object } from 'prop-types';
+
 
 export const Card = ({ house, handleClick }) => {
   const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
@@ -23,5 +25,10 @@ export const Card = ({ house, handleClick }) => {
     </article> 
   )
 }
+
+Card.propTypes = {
+  house: object.isRequired,
+  handleClick: func
+};
 
 export default Card;

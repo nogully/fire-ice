@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { expandHouse } from '../../actions/actions'
 import Card from '../Card/Card'
 import * as apiCalls from '../../apiCalls'
+import PropTypes, { func, array } from 'prop-types';
+
 
 export class CardContainer extends Component {
 
@@ -37,5 +39,10 @@ export const mapStateToProps = ({ houses }) => ({ houses });
 export const mapDispatchToProps = dispatch => ({ 
   expandHouse: (houseName, swornMembers) => dispatch(expandHouse(houseName, swornMembers))
 });
+
+CardContainer.propTypes = {
+  houses: array.isRequired,
+  expandHouse: func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
