@@ -4,7 +4,13 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { fakeAction } from '../../actions';
+import * as api from '../../apiCalls'
 class App extends Component {
+
+  componentDidMount = async () => {
+    const houseData = await api.resolveEndpoint('http://localhost:3001/api/v1/houses')
+    console.log(houseData)
+  }
 
   render() {
     return (
