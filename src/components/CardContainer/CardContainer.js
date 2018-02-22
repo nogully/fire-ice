@@ -6,7 +6,7 @@ import Card from '../Card/Card'
 export class CardContainer extends Component {
 
   cardElements = () => {
-    const { houses, expandCard } = this.props;
+    const { houses, expandHouse } = this.props;
     return houses.map((house, index) => {
       return <Card house={house} key={index} expandHouse={expandHouse} />
     })
@@ -24,7 +24,7 @@ export class CardContainer extends Component {
 export const mapStateToProps = ({ houses }) => ({ houses });
 
 export const mapDispatchToProps = dispatch => ({ 
-  expandCard: house => dispatch(expandHouse(house))
+  expandHouse: house => dispatch(expandHouse(house))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);

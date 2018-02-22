@@ -11,7 +11,7 @@ export class App extends Component {
 
   componentDidMount = async () => {
     const houseData = await api.resolveEndpoint('http://localhost:3001/api/v1/houses')
-    this.props.populateHouses(houseData)
+    this.props.populateHouses(houseData);
   }
 
   render() {
