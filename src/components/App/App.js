@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes, { shape, func, string } from 'prop-types';
+import PropTypes, { shape, func, string, array } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { populateHouses } from '../../actions/actions';
+import CardContainer from '../CardContainer/CardContainer'
 import * as api from '../../apiCalls'
 
 export class App extends Component {
@@ -31,13 +32,13 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  fake: shape({ fake: string }),
+  houses: array.isRequired,
   populateHouses: func.isRequired
 };
 
-const mapStateToProps = ({ houses }) => ({ houses });
+export const mapStateToProps = ({ houses }) => ({ houses });
 
-const mapDispatchToProps = dispatch => ({ 
+export const mapDispatchToProps = dispatch => ({ 
   populateHouses: (houses) => dispatch(populateHouses(houses))
 });
 

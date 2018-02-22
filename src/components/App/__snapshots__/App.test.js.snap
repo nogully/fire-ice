@@ -5,7 +5,16 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
-    houses={Array []}
+    houses={
+        Array [
+            Object {
+              "name": "House Dayne of Starfall",
+            },
+            Object {
+              "name": "House Lannister of Casterly Rock",
+            },
+          ]
+    }
     populateHouses={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -36,11 +45,7 @@ ShallowWrapper {
         <div
           className="Display-info"
 >
-          <img
-                    alt="wolf"
-                    id="wolf"
-                    src="./wolf.gif"
-          />
+          <Connect(CardContainer) />
 </div>,
       ],
       "className": "App",
@@ -98,26 +103,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <img
-            alt="wolf"
-            id="wolf"
-            src="./wolf.gif"
-/>,
+          "children": <Connect(CardContainer) />,
           "className": "Display-info",
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "wolf",
-            "id": "wolf",
-            "src": "./wolf.gif",
-          },
+          "nodeType": "class",
+          "props": Object {},
           "ref": null,
           "rendered": null,
-          "type": "img",
+          "type": [Function],
         },
         "type": "div",
       },
@@ -146,11 +143,7 @@ ShallowWrapper {
           <div
             className="Display-info"
 >
-            <img
-                        alt="wolf"
-                        id="wolf"
-                        src="./wolf.gif"
-            />
+            <Connect(CardContainer) />
 </div>,
         ],
         "className": "App",
@@ -208,26 +201,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <img
-              alt="wolf"
-              id="wolf"
-              src="./wolf.gif"
-/>,
+            "children": <Connect(CardContainer) />,
             "className": "Display-info",
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "wolf",
-              "id": "wolf",
-              "src": "./wolf.gif",
-            },
+            "nodeType": "class",
+            "props": Object {},
             "ref": null,
             "rendered": null,
-            "type": "img",
+            "type": [Function],
           },
           "type": "div",
         },
@@ -241,7 +226,6 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
-    "disableLifeCycleMethods": true,
   },
 }
 `;
