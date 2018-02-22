@@ -7,11 +7,12 @@ export const houses = (state=[], action) => {
     case 'EXPAND_HOUSE': 
       const newState = state.map( house => {
         if (house.name === action.houseName) {
-          house.
+          house['swornMembers'] = [1, 2, 3];
+          return house
         } else { 
           return house }
       })
-      return 
+      return newState;
     default:
       return state;
   }
