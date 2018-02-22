@@ -1,16 +1,18 @@
 import React from 'react';
-import PropTypes, { func, object } from 'prop-types';
+import { func, object } from 'prop-types';
 
 
 export const Card = ({ house, handleClick }) => {
   const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
   const swornMemberElements = swornMembers.map(member => {
     if (member.name){
-        return (
-          <p>{member.name} : {member.status} </p>
-        )
-    } else {return null}
-  })
+      return (
+        <p>{member.name} : {member.status} </p>
+      );
+    } else {
+      return null;
+    }
+  });
   
   return (
     <article className="Card" id={name} onClick={handleClick}>
@@ -23,8 +25,8 @@ export const Card = ({ house, handleClick }) => {
       <p>{words}</p>
       { swornMemberElements }
     </article> 
-  )
-}
+  );
+};
 
 Card.propTypes = {
   house: object.isRequired,

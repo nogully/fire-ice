@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { App, mapStateToProps, mapDispatchToProps } from './App.js';
 import { CardContainer } from '../CardContainer/CardContainer'

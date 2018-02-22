@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import PropTypes, { func, array } from 'prop-types';
+import { func, array } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux';
 import { populateHouses } from '../../actions/actions';
-import CardContainer from '../CardContainer/CardContainer'
-import * as api from '../../apiCalls'
+import CardContainer from '../CardContainer/CardContainer';
+import * as api from '../../apiCalls';
 
 export class App extends Component {
 
   componentDidMount = async () => {
-    const houseData = await api.fetchHouses('http://localhost:3001/api/v1/houses')
+    const houseData = await api.fetchHouses('http://localhost:3001/api/v1/houses');
     this.props.populateHouses(houseData);
   }
 
