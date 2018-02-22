@@ -30,8 +30,13 @@ describe('apiCalls', () => {
     })
 
     it('should throw an error if the status code is not OK', () => {
-      
-
+      window.fetch = jest.fn().mockImplementation( () => {
+        return Promise.resolve({ status: 500 })
+       })
+      const mockUrl = 'http://localhost:3001/api/v1/houses'
+      const response = apiCalls.resolveEndpoint(mockUrl);
+      const expected = Error('could not resolve endpoint')
+      expect(response).rejects.toEqual(expected)
     })
 
   })
