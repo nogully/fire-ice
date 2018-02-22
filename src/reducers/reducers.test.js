@@ -17,5 +17,25 @@ describe('reducers', () => {
       const expected = [ {name: "House Corbray of Hearts Home" } ]
       expect(houses(mockStore, mockAction)).toEqual(expected)
     })
+
+    it('should expand the value of houses in the Redux store via EXPAND_HOUSE action', () => {
+      const mockStore = [ { name: "Christie's House of Badass" }]
+      const mockAction = {
+        type: 'EXPAND_HOUSE', 
+        houseName: "Christie's House of Badass",
+        swornMembers: [
+          { name: "Jhun",
+           status: "Died of why tho" }
+        ]
+      }
+      const expected = [ { name: "Christie's House of Badass", 
+                           swornMembers: [
+                          { name: "Jhun",
+                           status: "Died of why tho" }
+                          ] }
+                      ]
+      expect(houses(mockStore, mockAction)).toEqual(expected)
+    })
+
   })
 })

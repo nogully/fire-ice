@@ -17,6 +17,7 @@ describe('App', () => {
           json: () => { Promise.resolve( mockHouses )}
         })
       })
+      
     })
 
     it('should match snapshot', () => {

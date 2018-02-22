@@ -18,4 +18,24 @@ describe('actions', () => {
       expect(action).toEqual(expected)
     })
   })
+
+  describe('expandHouse', () => {
+    it('should create an action object with a payload of houseName and swornMembers', () => {
+      const mockHouseName = "Christie's House of Badass"
+      const mockMembers = [
+          'Jhun',
+          'Will'
+        ]
+      const expected = {
+        type: 'EXPAND_HOUSE', 
+        houseName: "Christie's House of Badass",
+        swornMembers: [
+          'Jhun',
+          'Will'
+        ]
+      }
+      const action = actions.expandHouse(mockHouseName, mockMembers)
+      expect(action).toEqual(expected)
+    })
+  })
 })
