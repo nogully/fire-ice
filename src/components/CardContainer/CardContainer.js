@@ -5,10 +5,9 @@ import Card from '../Card/Card'
 export class CardContainer extends Component {
 
   cardElements = () => {
-    console.log(this.props)
     const { houses } = this.props;
-    return houses.map(house => {
-      return <Card house={house} />
+    return houses.map((house, index) => {
+      return <Card house={house} key={index} />
     })
   }
   

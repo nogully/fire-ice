@@ -31,7 +31,29 @@ describe('App', () => {
 
   describe('mapStateToProps', () => {
     it('should define value of houses prop for the App container via Redux store', () => {
-      
+      const mockStore = { houses: [
+              { name: "House Dayne of Starfall"}, 
+              { name: "House Lannister of Casterly Rock"}
+            ]}
+      const expected = { houses: [
+        { name: "House Dayne of Starfall"}, 
+        { name: "House Lannister of Casterly Rock"}
+      ]}
+      const mapped = mapStateToProps(mockStore)
+      expect(mapped).toEqual(expected)
+    })
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('should call the Redux method dispatch in order to send a populateHouses action to update the store', () => {
+      const mockHouses = [
+        { name: "House Dayne of Starfall"}, 
+        { name: "House Lannister of Casterly Rock"}
+      ]
+      const mockDispatch = jest.fn()
+      const mapped = mapDispatchToProps(mockDispatch)
+      mapped.populateHouses(mockHouses);
+      expect(mockDispatch).toHaveBeenCalled()
     })
   })
 })
