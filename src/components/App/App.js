@@ -18,11 +18,10 @@ class App extends Component {
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to Westeros</h2>
-          <button onClick={() => {
-            alert(this.props.fake);
-          }}> FAKE ACTION</button>
         </div>
         <div className='Display-info'>
+          { this.props.houses.length ? null : 
+            <img src={'./wolf.gif'} id='wolf' alt='wolf' />}
         </div>
       </div>
     );
