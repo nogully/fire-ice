@@ -1,7 +1,8 @@
-export const houses = (state=[
-  ], action) => {
+export const houses = (state=[], action) => {
   switch (action.type) {
-  default:
-    return state;
+    case 'POPULATE_HOUSES': 
+      return action.houses;
+    default:
+      return state;
   }
 };
