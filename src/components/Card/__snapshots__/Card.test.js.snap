@@ -8,6 +8,7 @@ ShallowWrapper {
     house={
         Object {
             "name": "House Dayne of Starfall",
+            "swornMembers": Array [],
           }
     }
 />,
@@ -25,16 +26,30 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h3>
+          Name: 
           House Dayne of Starfall
 </h3>,
+        <p>
+          Founded: 
+</p>,
+        <p>
+          Seats: 
+</p>,
+        <p>
+          Titles: 
+</p>,
+        <p>
+          Coat of Arms: 
+</p>,
+        <p>
+          Ancestral Weapons: 
+</p>,
         <p />,
-        <p />,
-        <p />,
-        <p />,
-        <p />,
-        <p />,
+        Array [],
       ],
       "className": "Card",
+      "id": "House Dayne of Starfall",
+      "onClick": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -43,10 +58,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "House Dayne of Starfall",
+          "children": Array [
+            "Name: ",
+            "House Dayne of Starfall",
+          ],
         },
         "ref": null,
-        "rendered": "House Dayne of Starfall",
+        "rendered": Array [
+          "Name: ",
+          "House Dayne of Starfall",
+        ],
         "type": "h3",
       },
       Object {
@@ -54,10 +75,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "Founded: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "Founded: ",
+          undefined,
+        ],
         "type": "p",
       },
       Object {
@@ -65,10 +92,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "Seats: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "Seats: ",
+          undefined,
+        ],
         "type": "p",
       },
       Object {
@@ -76,10 +109,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "Titles: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "Titles: ",
+          undefined,
+        ],
         "type": "p",
       },
       Object {
@@ -87,10 +126,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "Coat of Arms: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "Coat of Arms: ",
+          undefined,
+        ],
         "type": "p",
       },
       Object {
@@ -98,10 +143,16 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "Ancestral Weapons: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "Ancestral Weapons: ",
+          undefined,
+        ],
         "type": "p",
       },
       Object {
@@ -126,16 +177,30 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h3>
+            Name: 
             House Dayne of Starfall
 </h3>,
+          <p>
+            Founded: 
+</p>,
+          <p>
+            Seats: 
+</p>,
+          <p>
+            Titles: 
+</p>,
+          <p>
+            Coat of Arms: 
+</p>,
+          <p>
+            Ancestral Weapons: 
+</p>,
           <p />,
-          <p />,
-          <p />,
-          <p />,
-          <p />,
-          <p />,
+          Array [],
         ],
         "className": "Card",
+        "id": "House Dayne of Starfall",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -144,10 +209,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "House Dayne of Starfall",
+            "children": Array [
+              "Name: ",
+              "House Dayne of Starfall",
+            ],
           },
           "ref": null,
-          "rendered": "House Dayne of Starfall",
+          "rendered": Array [
+            "Name: ",
+            "House Dayne of Starfall",
+          ],
           "type": "h3",
         },
         Object {
@@ -155,10 +226,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "Founded: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "Founded: ",
+            undefined,
+          ],
           "type": "p",
         },
         Object {
@@ -166,10 +243,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "Seats: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "Seats: ",
+            undefined,
+          ],
           "type": "p",
         },
         Object {
@@ -177,10 +260,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "Titles: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "Titles: ",
+            undefined,
+          ],
           "type": "p",
         },
         Object {
@@ -188,10 +277,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "Coat of Arms: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "Coat of Arms: ",
+            undefined,
+          ],
           "type": "p",
         },
         Object {
@@ -199,10 +294,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "Ancestral Weapons: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "Ancestral Weapons: ",
+            undefined,
+          ],
           "type": "p",
         },
         Object {

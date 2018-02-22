@@ -9,6 +9,7 @@ export const Card = ({ house, handleClick }) => {
         )
     } else {return null}
   })
+  
   return (
     <article className="Card" id={name} onClick={handleClick}>
       <h3>Name: {name}</h3>
