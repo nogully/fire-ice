@@ -14,11 +14,13 @@ export class CardContainer extends Component {
   }
   
   handleClick = async (e) => {
-    const {houses} = this.props;
+    const { houses } = this.props;
     const { id } = e.target;
-    const foundHouse = houses.find( house => house.name === id);
+    const foundHouse = houses.filter(house => house.name === id);
+    console.log(foundHouse)
     const newMembers = await apiCalls.fetchSwornMembers(foundHouse);
-    this.props.expandHouse(id, swornMembers)
+    console.log(newMembers)
+    this.props.expandHouse(id, newMembers)
   }
 
   render() {

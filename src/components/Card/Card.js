@@ -2,7 +2,8 @@ import React from 'react';
 
 export const Card = ({ house, handleClick }) => {
   const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
-  const swornMemberElements = swornMembers.includes('name') ? <p>swornMembers</p> : null;
+  const swornMemberElements = swornMembers.includes('http') ?
+   null : <p>swornMembers coming!</p>;
   return (
     <article className="Card" id={name} onClick={handleClick}>
       <h3>Name: {name}</h3>
