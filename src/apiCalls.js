@@ -45,9 +45,12 @@ const cleanHouses = houses => {
 }
 
 export const fetchSwornMembers = (house) => {
-  const { swornMembers } = house;
+  const { swornMembers } = house[0];
   const unresolvedPromises = swornMembers.map( async (member) => {
     const memberData = await resolveEndpoint(member)
-    const 
+    return Object.assign({}, 
+      {name: memberData.name}, 
+      {status: memberData.died ? memberData.died : 'alive' })
   })
+  return Promise.all(unresolvedPromises)
 }
