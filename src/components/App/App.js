@@ -10,7 +10,7 @@ import * as api from '../../apiCalls'
 export class App extends Component {
 
   componentDidMount = async () => {
-    const houseData = await api.resolveEndpoint('http://localhost:3001/api/v1/houses')
+    const houseData = await api.fetchHouses('http://localhost:3001/api/v1/houses')
     this.props.populateHouses(houseData);
   }
 

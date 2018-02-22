@@ -1,4 +1,4 @@
-export const resolveEndpoint = async (url) => {
+export const fetchHouses = async (url) => {
   try {
     const response = await fetch(url);
     if (response.status > 226) {
@@ -13,19 +13,41 @@ export const resolveEndpoint = async (url) => {
   }
 }
 
+export const resolveEndpoint = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (response.status > 226) {
+      throw new Error('could not resolve endpoint')
+    } else {
+      const data = await response.json()
+      return data;
+    }
+  } catch(error) {
+    throw(error);
+  }
+}
+
 const cleanHouses = houses => {
   const cleaned = houses.map( house => {
     const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
     return Object.assign({}, 
       {name}, 
       {founded}, 
-      {seats}, 
-      {titles}, 
+      {seats: seats.join(', ')}, 
+      {titles: titles.join(', ')}, 
       {coatOfArms}, 
       {ancestralWeapons}, 
       {words}, 
-      {swornMembers: []}
+      {swornMembers}
     )
   })
   return cleaned;
+}
+
+export const fetchSwornMembers = (house) => {
+  const { swornMembers } = house;
+  const unresolvedPromises = swornMembers.map( async (member) => {
+    const memberData = await resolveEndpoint(member)
+    const 
+  })
 }
