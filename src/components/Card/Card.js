@@ -2,8 +2,13 @@ import React from 'react';
 
 export const Card = ({ house, handleClick }) => {
   const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words, swornMembers } = house; 
-  const swornMemberElements = swornMembers.includes('http') ?
-   null : <p>swornMembers coming!</p>;
+  const swornMemberElements = swornMembers.map(member => {
+    if (member.name){
+        return (
+          <p>{member.name} : {member.status} </p>
+        )
+    } else {return null}
+  })
   return (
     <article className="Card" id={name} onClick={handleClick}>
       <h3>Name: {name}</h3>
